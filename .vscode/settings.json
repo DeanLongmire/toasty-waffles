@@ -18,5 +18,9 @@
         "titleBar.inactiveBackground": "#290ea099",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.remoteColor": "290ea0"
+    "peacock.remoteColor": "290ea0",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
