@@ -1,12 +1,27 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
 .tw-button-no-border {
-  padding-right: 3px;
+  padding-right: 10px;
   border: none;
   background: none;
   display: flex;
+  text-decoration: none;
+  color: black;
 }
 
 .tw-button-no-border:hover {
+  text-shadow: 0 0 1px black;
+}
+
+.tw-button-grouped-no-border {
+  padding-right: 5px;
+  border: none;
+  background: none;
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.tw-button-grouped-no-border:hover {
   text-shadow: 0 0 1px black;
 }
 
