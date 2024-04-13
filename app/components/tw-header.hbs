@@ -1,17 +1,21 @@
 <div class="tw-header-div">
-    <div class="tw-grouped-buttons">
-        <LinkTo @route="home" class="tw-button-no-border">
-            Toasty Waffles 
-        </LinkTo> 
-        <button class="tw-button-no-border" type="button">
-            2024 - 2025
-        </button>
-    </div>
-    <button class="tw-button-no-border" type="button">
-        League 
-    </button> 
-    <button class="tw-button-no-border" type="button">
-        Teams 
-    </button>
+  <div class="tw-grouped-buttons">
+    <LinkTo
+      @route="home.year"
+      @model="2024"
+      class="tw-button-grouped-no-border"
+    >
+      Toasty Waffles
+    </LinkTo>
+    <LinkTo @route="home.year-select" class="tw-button-grouped-no-border">
+      2024 - 2025
+    </LinkTo>
+  </div>
+  <button class="tw-button-no-border" type="button">
+    League
+  </button>
+  <button class="tw-button-no-border" type="button">
+    Teams
+  </button>
 </div>
-<hr>
+<hr />
