@@ -7,5 +7,9 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('home');
+  this.route('seasons', function () {
+    this.route('season', { path: '/:season_id' });
+  });
+  this.route('league');
+  this.route('teams');
 });

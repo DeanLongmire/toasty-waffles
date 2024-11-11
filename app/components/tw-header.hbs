@@ -1,16 +1,18 @@
 <div class="tw-header-div">
     <div class="tw-grouped-buttons">
-        <LinkTo @route="home" class="tw-button-no-border">
+        <LinkTo @route="application" class="tw-button-no-border">
             Toasty Waffles 
         </LinkTo> 
-        <button class="tw-button-no-border" type="button">
-            2024 - 2025
-        </button>
+        {{#each this.seasons as |season|}}
+            <button class="tw-button-no-border" type="button" {{on "click" (fn this.routeSeason season)}}>
+                {{season}}
+            </button>
+        {{/each}}
     </div>
-    <button class="tw-button-no-border" type="button">
+    <button class="tw-button-no-border" type="button" {{on "click" (fn this.routeHeader 'league')}}>
         League 
     </button> 
-    <button class="tw-button-no-border" type="button">
+    <button class="tw-button-no-border" type="button" {{on "click" (fn this.routeHeader 'teams')}}>
         Teams 
     </button>
 </div>
