@@ -55,4 +55,22 @@ function routes() {
   this.get('/teams', (schema) => {
     return schema.teams.all();
   });
+
+  // this.namespace = 'https://api.sleeper.app/v1/';
+
+  // this.get(
+  //   'https://api.sleeper.app/v1/user/998437145096478720/leagues/nfl/:year',
+  //   (schema, request) => {
+  //     console.log('Schema:', schema);
+  //     console.log('Request:', request);
+  //     return fetch(request.responseURL, {
+  //       method: 'GET',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
+  //   }
+  // );
+
+  this.passthrough('https://api.sleeper.app/v1/user/**');
 }
