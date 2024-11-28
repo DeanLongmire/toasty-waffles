@@ -51,4 +51,8 @@ function routes() {
   this.get('/years', (schema) => {
     return schema.years.all();
   });
+
+  this.get('/teams', (schema) => {
+    return schema.teams.all();
+  });
 }

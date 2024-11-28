@@ -1,2 +1,4 @@
-{{page-title "Teams"}}
-{{outlet}}
+{{#each @model.teams as |team|}}
+    {{team.teamName}}
+    <br/>
+{{/each}}
