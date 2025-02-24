@@ -14,7 +14,7 @@ export default function (config) {
       ...config.models,
     },
     // uncomment to opt into ember-cli-mirage to auto discover ember serializers
-    serializers: applyEmberDataSerializers(config.serializers),
+    // serializers: applyEmberDataSerializers(config.serializers),
     routes,
   };
 
@@ -49,11 +49,67 @@ function routes() {
   */
 
   this.get('/years', (schema) => {
-    return schema.years.all();
+    let years = schema.years.all().models;
+    return {
+      data: years.map((year) => {
+        return {
+          id: year.id,
+          type: 'year',
+          attributes: {
+            startYear: year.startYear,
+            endYear: year.endYear,
+          },
+        };
+      }),
+    }
   });
 
-  this.get('/teams', (schema) => {
-    return schema.teams.all();
+  this.get('/leagues', (schema) => {
+    let leagues = schema.leagues.all().models;
+    return {
+      data: leagues.map((league) => {
+        return {
+          id: league.id,
+          type: 'league',
+          attributes: {
+            leagueName: league.leagueName,
+            divisions: league.divisions.map((division) => {
+              return {
+                divisionName: division.divisionName,
+                teams: division.teams.map((team) => {
+                  return {
+                    teamName: team.teamName,
+                  }
+                }),
+              }
+            }),
+          }
+        }
+      })
+    }
+  });
+
+  this.get('/leagues/:id', (schema, request) => {
+    let league = schema.leagues.find(request.params.id);
+    return {
+      data: {
+        id: league.id,
+        type: 'league',
+        attributes: {
+          leagueName: league.leagueName,
+          divisions: league.divisions.map((division) => {
+            return {
+              divisionName: division.divisionName,
+              teams: division.teams.map((team) => {
+                return {
+                  teamName: team.teamName,
+                }
+              }),
+            }
+          }),
+        }
+      }
+    }
   });
 
   // this.namespace = 'https://api.sleeper.app/v1/';
