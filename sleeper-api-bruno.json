@@ -1,0 +1,548 @@
+{
+  "name": "Sleeper API",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "Avatar",
+      "items": [
+        {
+          "type": "http",
+          "name": "Avatar",
+          "seq": 1,
+          "request": {
+            "url": "https://sleepercdn.com/avatars/4f4090e5e9c3941414db40a871e3e909",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Avatar (thumbnail)",
+          "seq": 1,
+          "request": {
+            "url": "https://sleepercdn.com/avatars/thumbs/116c6308a2b602dfd5e38a84d248eb27",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "Can also get league avatars ONLY with thumbnail version",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Player Avatar",
+          "seq": 3,
+          "request": {
+            "url": "https://sleepercdn.com/content/nfl/players/7049.jpg",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Draft",
+      "items": [
+        {
+          "type": "http",
+          "name": "Draft",
+          "seq": 1,
+          "request": {
+            "url": "https://api.sleeper.app/v1/draft/1075584259777228801",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "User Draft",
+          "seq": 4,
+          "request": {
+            "url": "https://api.sleeper.app/v1/user/998437145096478720/drafts/nfl/2024",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Draft Picks",
+          "seq": 2,
+          "request": {
+            "url": "https://api.sleeper.app/v1/draft/1075584259777228801/picks",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Draft Traded Picks",
+          "seq": 3,
+          "request": {
+            "url": "https://api.sleeper.app/v1/draft/1075584259777228801/traded_picks",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "User",
+      "items": [
+        {
+          "type": "http",
+          "name": "User League",
+          "seq": 2,
+          "request": {
+            "url": "https://api.sleeper.app/v1/user/998437145096478720/leagues/nfl/2024",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "User",
+          "seq": 1,
+          "request": {
+            "url": "https://api.sleeper.app/v1/user/998437145096478720",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "League",
+      "items": [
+        {
+          "type": "http",
+          "name": "League",
+          "seq": 1,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "League Rosters",
+          "seq": 3,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/rosters",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "League Users",
+          "seq": 5,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/users",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "metadata.avatar is team avatar url",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Losers Bracket",
+          "seq": 6,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/losers_bracket",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Winners Bracket",
+          "seq": 9,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/winners_bracket",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "r\tint\tThe round for this matchup, 1st, 2nd, 3rd round, etc.\nm\tint\tThe match id of the matchup, unique for all matchups within a bracket.\nt1\tint\tThe roster_id of a team in this matchup OR {w: 1} which means the winner of match id 1\nt2\tint\tThe roster_id of the other team in this matchup OR {l: 1} which means the loser of match id 1\nw\tint\tThe roster_id of the winning team, if the match has been played.\nl\tint\tThe roster_id of the losing team, if the match has been played.\nt1_from\tobject\tWhere t1 comes from, either winner or loser of the match id, necessary to show bracket progression.\nt2_from\tobject\tWhere t2 comes from, either winner or loser of the match id, necessary to show bracket progression.\n\n[\n  {r: 1, m: 1,   t1: 3,    t2: 6,     w: null, l: null},\n  {r: 1, m: 2,   t1: 4,    t2: 5,     w: null, l: null},\n\n  {r: 2, m: 3,   t1: 1,    t2: null,  t2_from: {w: 1},  w: null, l: null},\n  {r: 2, m: 4,   t1: 2,    t2: null,  t2_from: {w: 2},  w: null, l: null},\n  {r: 2, m: 5,   t1: null, t2: null,  t1_from: {l: 1},  t2_from: {l: 2},  w: null, l: null, p: 5},\n\n  {r: 3, m: 6,   t1: null, t2: null,  t1_from: {w: 3},  t2_from: {w: 4},  w: null, l: null, p: 1},\n  {r: 3, m: 7,   t1: null, t2: null,  t1_from: {l: 3},  t2_from: {l: 4},  w: null, l: null, p: 3}\n]",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "League Traded Picks",
+          "seq": 4,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/traded_picks",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Transactions",
+          "seq": 8,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/transactions/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Matchups",
+          "seq": 7,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/matchups/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "Matchups can be determined by finding two teams with the same matchup_id",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "League Drafts",
+          "seq": 2,
+          "request": {
+            "url": "https://api.sleeper.app/v1/league/1075584259777228800/drafts",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Global",
+      "items": [
+        {
+          "type": "http",
+          "name": "Sport State",
+          "seq": 2,
+          "request": {
+            "url": "https://api.sleeper.app/v1/state/nfl",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "Up to date info for any a sport league",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Players",
+          "seq": 1,
+          "request": {
+            "url": "https://api.sleeper.app/v1/players/nfl",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Sleeper API",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0,
+    "filesCount": 0
+  }
+}
