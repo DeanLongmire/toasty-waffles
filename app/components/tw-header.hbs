@@ -5,7 +5,7 @@
         </LinkTo> 
         {{#each this.seasons as |season|}}
             <button class="tw-button-no-border" type="button" {{on "click" (fn this.routeSeason season)}}>
-                {{season}}
+                {{season.seasonRange}}
             </button>
         {{/each}}
     </div>

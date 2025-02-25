@@ -6,13 +6,14 @@ export default class ApplicationRoute extends Route {
   @service store;
 
   async model() {
-    let tmp = await this.store.findAll('year');
+    let years = await this.store.findAll('year');
     let league = await this.store.find('league', 1);
     this.parseLeague(league);
-    this.league.latestYear = tmp.lastObject.startYear;
+    this.parseYears(years);
+    this.league.latestYear = years.lastObject.startYear;
     return {
-      years: tmp,
-      league: league
+      years: years,
+      league: league,
     };
   }
 
@@ -21,7 +22,7 @@ export default class ApplicationRoute extends Route {
       this.store.createRecord('division', {
         id: division.id,
         name: division.divisionName,
-        teams: division.teams
+        teams: division.teams,
       });
 
       division.teams.forEach((team) => {
@@ -30,6 +31,12 @@ export default class ApplicationRoute extends Route {
           teamName: team.teamName,
         });
       });
+    });
+  }
+
+  parseYears(years) {
+    years.forEach((year) => {
+      year.yearRange = `${year.startYear.slice(-2)}-${year.endYear.slice(-2)}`;
     });
   }
 }

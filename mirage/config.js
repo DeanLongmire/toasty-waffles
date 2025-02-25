@@ -58,10 +58,12 @@ function routes() {
           attributes: {
             startYear: year.startYear,
             endYear: year.endYear,
+            champion: year.champion,
+            loser: year.loser,
           },
         };
       }),
-    }
+    };
   });
 
   this.get('/leagues', (schema) => {
@@ -80,14 +82,14 @@ function routes() {
                 teams: division.teams.map((team) => {
                   return {
                     teamName: team.teamName,
-                  }
+                  };
                 }),
-              }
+              };
             }),
-          }
-        }
-      })
-    }
+          },
+        };
+      }),
+    };
   });
 
   this.get('/leagues/:id', (schema, request) => {
@@ -106,13 +108,13 @@ function routes() {
                 return {
                   id: team.id,
                   teamName: team.teamName,
-                }
+                };
               }),
-            }
+            };
           }),
-        }
-      }
-    }
+        },
+      },
+    };
   });
 
   // this.namespace = 'https://api.sleeper.app/v1/';

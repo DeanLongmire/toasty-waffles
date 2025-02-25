@@ -6,5 +6,8 @@ export default class LeagueRoute extends Route {
   @service league;
 
   async model() {
+    return {
+      league: this.store.peekRecord('league', 1),
+    };
   }
 }

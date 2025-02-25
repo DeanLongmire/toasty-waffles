@@ -9,7 +9,11 @@ export default class TwHeaderComponent extends Component {
     let seasons = [];
     try {
       this.args.years.forEach((year) => {
-        let season = `${year.startYear.slice(-2)}-${year.endYear.slice(-2)}`;
+        let seasonRange = `${year.startYear.slice(-2)}-${year.endYear.slice(
+          -2
+        )}`;
+        let yearId = year.id;
+        let season = { seasonRange, yearId };
         seasons.push(season);
       });
     } catch (e) {
@@ -25,6 +29,6 @@ export default class TwHeaderComponent extends Component {
 
   @action
   routeSeason(season) {
-    this.router.transitionTo('seasons.season', season);
+    this.router.transitionTo('seasons.season', season.seasonRange);
   }
 }

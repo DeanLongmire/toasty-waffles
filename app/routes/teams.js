@@ -5,5 +5,8 @@ export default class TeamsRoute extends Route {
   @service store;
 
   async model() {
+    return {
+      teams: this.store.peekAll('team'),
+    };
   }
 }

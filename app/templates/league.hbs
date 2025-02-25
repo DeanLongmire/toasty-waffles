@@ -1,10 +1,10 @@
 {{page-title "League"}}
 
-{{!-- {{#each this.divisions as |division|}}
-  <h2>{{division.name}}</h2>
+{{#each @model.league.divisions as |division|}}
+  <h2>{{division.divisionName}}</h2>
   <ul>
     {{#each division.teams as |team|}}
-      <li>{{team.name}}</li>
+      <li>{{team.teamName}}</li>
     {{/each}}
   </ul>
-{{/each}} --}}
+{{/each}}
