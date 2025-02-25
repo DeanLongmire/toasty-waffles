@@ -75,6 +75,7 @@ function routes() {
             leagueName: league.leagueName,
             divisions: league.divisions.map((division) => {
               return {
+                id: division.id,
                 divisionName: division.divisionName,
                 teams: division.teams.map((team) => {
                   return {
@@ -99,9 +100,11 @@ function routes() {
           leagueName: league.leagueName,
           divisions: league.divisions.map((division) => {
             return {
+              id: division.id,
               divisionName: division.divisionName,
               teams: division.teams.map((team) => {
                 return {
+                  id: team.id,
                   teamName: team.teamName,
                 }
               }),
