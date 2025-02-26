@@ -36,16 +36,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          cache: npm
-      - name: Install pnpm
+
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 9
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: 'pnpm'
+
       - name: Install Dependencies
         run: pnpm install
+
       - name: Run Tests
-        run: npm test
+        run: pnpm test
