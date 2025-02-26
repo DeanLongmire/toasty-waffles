@@ -7,7 +7,7 @@ export default class LeagueRoute extends Route {
 
   async model() {
     return {
-      league: this.store.peekRecord('league', 1),
+      league: this.store.peekRecord('league', 1075584259777228800),
     };
   }
 }

@@ -1,23 +1,22 @@
 export default [
   {
-    id: 1,
+    id: 1075584259777228800,
     leagueName: 'Toasty Waffles',
     divisions: [
       {
         id: 1,
         divisionName: 'Buttermilk Waffles',
-        whatever: 'whatever',
         teams: [
           {
-            id: 5,
+            id: 698721663574941696,
             teamName: 'Smelly Kuntz',
           },
           {
-            id: 6,
+            id: 996306474404040704,
             teamName: 'Team TigManBitties',
           },
           {
-            id: 8,
+            id: 996644962852732928,
             teamName: 'QB prodigies',
           },
         ],
@@ -27,15 +26,15 @@ export default [
         divisionName: 'Cinnamon Waffles',
         teams: [
           {
-            id: 9,
+            id: 996645393918152704,
             teamName: 'The Fourth Reich',
           },
           {
-            id: 3,
+            id: 562540907841421312,
             teamName: "Mallory's Bitch",
           },
           {
-            id: 1,
+            id: 998437145096478720,
             teamName: 'The D',
           },
         ],
@@ -45,15 +44,15 @@ export default [
         divisionName: 'Blueberry Waffles',
         teams: [
           {
-            id: 10,
+            id: 866543990391074816,
             teamName: 'Team Rocket',
           },
           {
-            id: 7,
+            id: 712011990641471488,
             teamName: "Mashdaddy's Monsters",
           },
           {
-            id: 11,
+            id: 711821119291752448,
             teamName: 'Feeling Nicey',
           },
         ],
@@ -63,15 +62,15 @@ export default [
         divisionName: 'Chocolate Chip Waffles',
         teams: [
           {
-            id: 12,
+            id: 1001334659659190272,
             teamName: 'Coach of the YEAR! PRIME',
           },
           {
-            id: 2,
+            id: 712424460816318464,
             teamName: 'RacistRedskins',
           },
           {
-            id: 4,
+            id: 1001286483183030272,
             teamName: 'My BallZach Ertz From Sex',
           },
         ],

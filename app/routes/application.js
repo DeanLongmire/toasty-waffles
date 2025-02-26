@@ -7,7 +7,7 @@ export default class ApplicationRoute extends Route {
 
   async model() {
     let years = await this.store.findAll('year');
-    let league = await this.store.find('league', 1);
+    let league = await this.store.find('league', 1075584259777228800);
     this.parseLeague(league);
     this.parseYears(years);
     this.league.latestYear = years.lastObject.startYear;
