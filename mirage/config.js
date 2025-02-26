@@ -101,6 +101,7 @@ function routes() {
               id: division.id,
               divisionName: division.divisionName,
               teams: division.teams.map((team) => {
+                console.log(team.id)
                 return {
                   id: team.id,
                   teamName: team.teamName,
