@@ -7,6 +7,7 @@ export default class TeamsRoute extends Route {
   async model() {
     return {
       teams: this.store.peekAll('team'),
+      players: this.store.findRecord('player', 1),
     };
   }
 }

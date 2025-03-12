@@ -62,6 +62,29 @@ function routes() {
     };
   });
 
+  this.get('/players/:id', (schema, request) => {
+    let player = schema.players.find(request.params.id);
+    return {
+      data: {
+        id: player.id,
+        type: 'player',
+        attributes: {
+          firstName: player.first_name,
+          lastName: player.last_name,
+          birthDate: player.birth_date,
+          status: player.status,
+          yearsExp: player.years_exp,
+          position: player.position,
+          college: player.college,
+          fullName: player.full_name,
+          team: player.team,
+          statsId: player.stats_id,
+          image: player.image,
+        },
+      },
+    };
+  });
+
   this.get('/leagues', (schema) => {
     let leagues = schema.leagues.all().models;
     return {
