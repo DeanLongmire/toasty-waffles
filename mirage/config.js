@@ -28,6 +28,8 @@ function routes() {
     Note: these only affect routes defined *after* them!
   */
 
+  this.passthrough('http://localhost:8080/**');
+
   // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
   this.namespace = ''; // make this `/api`, for example, if your API is namespaced
   // this.timing = 400;      // delay for each request, automatically set to 0 during testing
@@ -85,6 +87,20 @@ function routes() {
     };
   });
 
+  this.get('/teams/:id', (schema, request) => {
+    let team = schema.teams.find(request.params.id);
+    return {
+      data: {
+        id: team.id,
+        type: 'team',
+        attributes: {
+          teamName: team.teamName,
+          players: team.players,
+        },
+      },
+    };
+  });
+
   this.get('/leagues', (schema) => {
     let leagues = schema.leagues.all().models;
     return {
@@ -127,6 +143,7 @@ function routes() {
                 return {
                   id: team.id,
                   teamName: team.teamName,
+                  players: team.players,
                 };
               }),
             };

@@ -26,10 +26,7 @@ export default class ApplicationRoute extends Route {
       });
 
       division.teams.forEach((team) => {
-        this.store.createRecord('team', {
-          id: team.id,
-          teamName: team.teamName,
-        });
+        this.store.findRecord('team', team.id);
       });
     });
   }

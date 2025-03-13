@@ -1,5 +1,7 @@
 {{#each @model.teams as |team|}}
-  {{team.teamName}}
+  <button type="button" {{on "click" (fn this.routeToTeam team)}}>
+    {{team.teamName}}
+  </button>
   <br />
 {{/each}}
 <br />

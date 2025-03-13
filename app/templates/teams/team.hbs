@@ -1,0 +1,12 @@
+{{page-title "Team"}}
+
+{{#each this.players as |player|}}
+  <div class="player">
+    {{player.fullName}}
+    {{player.position}}
+    {{player.team}}
+  </div>
+  <div>
+    <img src={{player.image}} alt={{player.fullName}} />
+  </div>
+{{/each}}
