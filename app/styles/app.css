@@ -1,4 +1,188 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+html {
+  font-size: 16px; /* Default size */
+}
+
+@media (max-width: 768px) {
+  /* Tablets */
+  html {
+    font-size: 14px; /* Shrink the base font size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile */
+  html {
+    font-size: 12px;
+  }
+}
+
+.champion-callout-header {
+  text-align: center;
+  margin: 1rem;
+}
+
+.champion-callout-header-container {
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+
+.champion-callout-header-text {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.champion-callout-container {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.champion-callout-image {
+  border-radius: 50%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.champion-callout-image.large {
+  width: 12vw;
+}
+
+.champion-callout-image-container {
+  min-width: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.champion-callout-content {
+  padding: 0 2rem;
+  height: 60%;
+  flex-grow: 1;
+  background-color: mediumvioletred;
+}
+
+.champion-callout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+
+.champion-matchup-container {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  height: 45%;
+}
+
+.champion-matchup-component {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30%;
+  width: 30%;
+}
+
+.champion-matchup-component.vs {
+  width: 10%;
+  margin: 0 1rem;
+}
+
+.champion-matchup-image-container {
+  height: 40%;
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+.champion-matchup-score {
+  height: 20%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.champion-matchup-team-name {
+  text-align: center;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.champion-mvp-showcase {
+  display: flex;
+  background-color: lightblue;
+  height: 55%;
+}
+
+.champion-quote {
+  width: 60%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mvp-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  margin-top: 0;
+  max-height: 80%;
+}
+
+.mvp-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.mvp-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.mvp-text {
+  max-height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.mvp-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
+.page-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 93vh;
+  width: 93vw;
+  position: relative;
+  padding: 0 30px;
+}
+
 .tw-button-no-border {
   padding-right: 3px;
   border: none;
@@ -23,4 +207,68 @@
 
 .tw-body {
   background-color: grey;
+}
+
+.week-overview {
+  min-width: 50%;
+  background-color: green;
+}
+
+@media (width <= 1180px) {
+  /* .champion-callout-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+  }
+
+  .champion-callout-image-container {
+    width: 30%;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .champion-callout-content {
+    padding: 0;
+  }
+
+  .champion-callout-header {
+    font-size: 3vw;
+  } */
+
+  .page-section {
+    padding: 0 15px;
+  }
+
+  @media (width < 900px) {
+    .champion-matchup-component.vs {
+      margin: 0 1.5rem;
+    }
+
+    .champion-mvp-showcase {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .champion-quote {
+      flex-grow: 1;
+    }
+
+    .mvp-image-wrapper {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .mvp-image-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .mvp-image-stats {
+      margin: 0.5rem 0;
+    }
+  }
 }

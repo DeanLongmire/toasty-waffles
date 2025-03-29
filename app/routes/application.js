@@ -10,15 +10,15 @@ export default class ApplicationRoute extends Route {
     let league = await this.store.find('league', 1075584259777228800);
     this.parseLeague(league);
     this.parseYears(years);
-    this.league.latestYear = years.lastObject.startYear;
+    this.league.latestYear = years.lastObject;
     return {
       years: years,
       league: league,
     };
   }
 
-  parseLeague(league) {
-    league.divisions.forEach((division) => {
+  async parseLeague(league) {
+    await league.divisions.forEach((division) => {
       this.store.createRecord('division', {
         id: division.id,
         name: division.divisionName,

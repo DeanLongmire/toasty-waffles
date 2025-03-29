@@ -1,7 +1,10 @@
 export default [
   {
     id: '998437145096478720',
+    avatar:
+      'https://sleepercdn.com/uploads/7b3bbf1e213f1ae9218f0f4cbc3a575d.jpg',
     teamName: 'The D',
+    rosterId: '7',
     players: [
       '10219',
       '10937',
@@ -33,6 +36,7 @@ export default [
   {
     id: '712424460816318464',
     teamName: 'RacistRedskins',
+    rosterId: '8',
     players: [
       '11576',
       '11586',
@@ -61,6 +65,7 @@ export default [
   {
     id: '562540907841421312',
     teamName: "Mallory's Bitch",
+    rosterId: '1',
     players: [
       '11439',
       '11567',
@@ -94,6 +99,7 @@ export default [
   {
     id: '1001286483183030272',
     teamName: 'My BallZach Ertz From Sex',
+    rosterId: '11',
     players: [
       '10235',
       '11589',
@@ -122,6 +128,7 @@ export default [
   {
     id: '698721663574941696',
     teamName: 'Smelly Kuntz',
+    rosterId: '2',
     players: [
       '10862',
       '11539',
@@ -154,6 +161,7 @@ export default [
   {
     id: '996306474404040704',
     teamName: 'Team TigManBitties',
+    rosterId: '4',
     players: [
       '10226',
       '10444',
@@ -185,6 +193,7 @@ export default [
   {
     id: '712011990641471488',
     teamName: "MashDaddy's Monsters",
+    rosterId: '3',
     players: [
       '10228',
       '10229',
@@ -215,6 +224,7 @@ export default [
   },
   {
     id: '996644962852732928',
+    rosterId: '5',
     teamName: 'QB prodigies',
     players: [
       '10236',
@@ -247,6 +257,8 @@ export default [
   {
     id: '996645393918152704',
     teamName: 'The Fourth Reich',
+    rosterId: '6',
+    avatar: '03ba3df5184ebd4ddac5c61400e33949',
     players: [
       '11435',
       '11566',
@@ -274,6 +286,9 @@ export default [
   },
   {
     id: '866543990391074816',
+    rosterId: '9',
+    avatar:
+      'https://sleepercdn.com/uploads/f32e25189eb834cddc96c898f4c8e93d.jpg',
     teamName: 'Team Rocket',
     players: [
       '11533',
@@ -306,6 +321,7 @@ export default [
   {
     id: '711821119291752448',
     teamName: 'Feeling Nicey',
+    rosterId: '10',
     players: [
       '10222',
       '10225',
@@ -333,7 +349,9 @@ export default [
   },
   {
     id: '1001334659659190272',
-    teamName: 'Team erikreeves1321',
+    rosterId: '12',
+    avatar: '82aec8e811b839b8ec25d7b458afd57b',
+    teamName: 'Coach of the YEAR! PRIME',
     players: [
       '11563',
       '11581',
