@@ -1,8 +1,12 @@
 <div class="tw-header-div">
   <div class="tw-grouped-buttons">
-    <LinkTo @route="application" class="tw-button-no-border">
+    <button
+      {{on "click" (fn this.routeHeader "index")}}
+      type="button"
+      class="tw-button-no-border"
+    >
       Toasty Waffles
-    </LinkTo>
+    </button>
     {{#each this.seasons as |season|}}
       <button
         class="tw-button-no-border"
