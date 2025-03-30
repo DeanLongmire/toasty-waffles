@@ -22,7 +22,7 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: {},
+  rules: { 'no-descending-specificity': 'off' },
   overrides: [
     // node files
     {

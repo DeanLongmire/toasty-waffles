@@ -90,6 +90,7 @@ html {
 .champion-matchup-component.vs {
   width: 10%;
   margin: 0 1rem;
+  justify-content: center;
 }
 
 .champion-matchup-image-container {
@@ -123,6 +124,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.fs-2 {
+  font-size: 2rem;
 }
 
 .mvp-image-container {
@@ -186,6 +191,10 @@ html {
   width: 93vw;
   position: relative;
   padding: 0 30px;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .tw-button-no-border {

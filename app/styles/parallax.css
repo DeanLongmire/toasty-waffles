@@ -1,41 +1,51 @@
 :root {
-  --angleX: 0deg;
-  --angleY: 0deg;
+  --angle-x: 0deg;
+  --angle-y: 0deg;
 }
+
 .pseudo-parallax-card-container {
   height: 100%;
 }
+
 .flex {
   display: flex;
 }
+
 .flex.flex-row {
   flex-flow: row wrap;
 }
+
 .mock {
   position: relative;
   width: 50%;
   height: 25%;
   z-index: 2;
 }
+
 .mock.bottom {
   bottom: -50%;
 }
+
 .mock.left.top:hover ~ .content-container {
-  --angleX: 4deg;
-  --angleY: -12deg;
+  --angle-x: 4deg;
+  --angle-y: -12deg;
 }
+
 .mock.left.bottom:hover ~ .content-container {
-  --angleX: -4deg;
-  --angleY: -12deg;
+  --angle-x: -4deg;
+  --angle-y: -12deg;
 }
+
 .mock.right.top:hover ~ .content-container {
-  --angleX: 4deg;
-  --angleY: 12deg;
+  --angle-x: 4deg;
+  --angle-y: 12deg;
 }
+
 .mock.right.bottom:hover ~ .content-container {
-  --angleX: -4deg;
-  --angleY: 12deg;
+  --angle-x: -4deg;
+  --angle-y: 12deg;
 }
+
 .content-container {
   top: -50%;
   position: relative;
@@ -50,8 +60,8 @@
   user-select: none;
   transition: box-shadow 0.5s ease, transform 0.65s ease;
   will-change: transform;
-  box-shadow: -20px 10px 20px rgba(0, 0, 0, 0.4);
-  transform: translatey(0) rotatex(var(--angleX, 0)) rotatey(var(--angleY, 0))
-    translatez(-10px);
+  box-shadow: -20px 10px 20px #0000005b;
+  transform: translateY(0) rotateX(var(--angle-x, 0)) rotateY(var(--angle-y, 0))
+    translateZ(-10px);
   filter: brightness(110%);
 }
