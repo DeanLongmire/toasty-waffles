@@ -5,5 +5,5 @@ export default class TeamModel extends Model {
   @attr('string') teamName;
   @attr('string') avatar;
   @attr('string') rosterId;
-  @attr('[]') players;
+  @attr('') players;
 }

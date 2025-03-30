@@ -5,10 +5,10 @@ export default class BracketModel extends Model {
   @attr('string') winningTeam;
   @attr('string') runnerUpTeam;
   @attr('string') type;
-  @attr('int') winningTeamPoints;
-  @attr('[]') winningTeamStarters;
-  @attr('[]') winningTeamStarterPoints;
-  @attr('int') runnerUpTeamPoints;
-  @attr('[]') runnerUpTeamStarters;
-  @attr('[]') runnerUpTeamStarterPoints;
+  @attr('number') winningTeamPoints;
+  @attr('') winningTeamStarters;
+  @attr('') winningTeamStarterPoints;
+  @attr('number') runnerUpTeamPoints;
+  @attr('') runnerUpTeamStarters;
+  @attr('') runnerUpTeamStarterPoints;
 }

@@ -4,24 +4,41 @@ import { service } from '@ember/service';
 
 export default class runnerUpCalloutComponent extends Component {
   @service store;
+  @service router;
 
   @tracked champion = this.args.champion.team;
   @tracked runnerUp = this.args.champion.matchup.runnerUpTeam.firstObject;
+  @tracked mvp;
+
+  constructor() {
+    super(...arguments);
+    this.loadMVP();
+  }
 
   get matchup() {
     return this.args.champion.matchup;
   }
 
-  get mvp() {
+  async loadMVP() {
     let highestScore = this.matchup.winningTeamStarterPoints.reduce(
       (max, num, index) => (num > max.value ? { value: num, index } : max),
       { value: -Infinity, index: -1 }
     );
-    let player = this.store.findRecord(
-      'player',
-      this.matchup.winningTeamStarters[highestScore.index]
-    );
-    return {
+
+    let player = await this.store
+      .findRecord(
+        'player',
+        this.matchup.winningTeamStarters[highestScore.index]
+      )
+      .then((record) => {
+        return record;
+      })
+      .catch((error) => {
+        console.error('Error fetching record:', error);
+        this.router.transitionTo('offline');
+      });
+
+    this.mvp = {
       player: player,
       points: highestScore.value,
     };

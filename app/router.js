@@ -13,4 +13,5 @@ Router.map(function () {
   this.route('league');
   this.route('teams');
   this.route('teams.team', { path: 'teams/:team_id' });
+  this.route('offline');
 });
