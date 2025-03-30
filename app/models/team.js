@@ -3,5 +3,7 @@ import { attr } from '@ember-data/model';
 
 export default class TeamModel extends Model {
   @attr('string') teamName;
-  @attr('[]') players;
+  @attr('string') avatar;
+  @attr('string') rosterId;
+  @attr('') players;
 }

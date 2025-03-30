@@ -12,8 +12,8 @@ export default class SeasonsSeasonRoute extends Route {
 
     return {
       year: year,
-      champion: await this.store.peekRecord('team', year.champion),
-      loser: await this.store.peekRecord('team', year.loser),
+      champion: await this.store.findRecord('team', year.champion),
+      loser: await this.store.findRecord('team', year.loser),
     };
   }
 }

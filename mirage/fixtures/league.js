@@ -2,6 +2,7 @@ export default [
   {
     id: '1075584259777228800',
     leagueName: 'Toasty Waffles',
+    season: '2024',
     divisions: [
       {
         id: 1,

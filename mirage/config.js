@@ -64,6 +64,27 @@ function routes() {
     };
   });
 
+  this.get('/brackets/:id', (schema, request) => {
+    let bracket = schema.brackets.find(request.params.id);
+    return {
+      data: {
+        id: bracket.id,
+        type: 'bracket',
+        attributes: {
+          winningTeam: bracket.winningTeam,
+          winningTeamPoints: bracket.winningTeamPoints,
+          winningTeamStarters: bracket.winningTeamStarters,
+          winningTeamStarterPoints: bracket.winningTeamStarterPoints,
+          runnerUpTeam: bracket.runnerUpTeam,
+          runnerUpTeamPoints: bracket.runnerUpTeamPoints,
+          runnerUpTeamStarters: bracket.runnerUpTeamStarters,
+          runnerUpTeamStarterPoints: bracket.runnerUpTeamStarterPoints,
+          type: bracket.type,
+        },
+      },
+    };
+  });
+
   this.get('/players/:id', (schema, request) => {
     let player = schema.players.find(request.params.id);
     return {
@@ -95,9 +116,37 @@ function routes() {
         type: 'team',
         attributes: {
           teamName: team.teamName,
+          avatar: team.avatar,
           players: team.players,
+          rosterId: team.rosterId,
         },
       },
+    };
+  });
+
+  this.get('/teams', (schema, request) => {
+    let queryParams = request.queryParams;
+    let teams = schema.teams.all().models;
+
+    console.log(queryParams);
+
+    if (queryParams.rosterId) {
+      teams = teams.filter((team) => team.rosterId === queryParams.rosterId);
+    }
+
+    return {
+      data: teams.map((team) => {
+        return {
+          id: team.id,
+          type: 'team',
+          attributes: {
+            teamName: team.teamName,
+            avatar: team.avatar,
+            players: team.players,
+            rosterId: team.rosterId,
+          },
+        };
+      }),
     };
   });
 
@@ -110,6 +159,7 @@ function routes() {
           type: 'league',
           attributes: {
             leagueName: league.leagueName,
+            season: league.season,
             divisions: league.divisions.map((division) => {
               return {
                 id: division.id,
@@ -135,6 +185,7 @@ function routes() {
         type: 'league',
         attributes: {
           leagueName: league.leagueName,
+          season: league.season,
           divisions: league.divisions.map((division) => {
             return {
               id: division.id,

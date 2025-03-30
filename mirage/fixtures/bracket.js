@@ -1,0 +1,40 @@
+export default [
+  {
+    id: '1075584259777228800',
+    winningTeam: '12',
+    winningTeamPoints: 174.32,
+    winningTeamStarters: [
+      '4892',
+      '3198',
+      '9224',
+      '6794',
+      '4981',
+      '9504',
+      '4217',
+      '11563',
+      '4195',
+      'MIA',
+    ],
+    winningTeamStarterPoints: [
+      34.56, 24.5, 13.1, 17.2, 14.1, 6.8, 19.2, 21.86, 11, 12,
+    ],
+    runnerUpTeam: '6',
+    runnerUpTeamPoints: 138.88,
+    runnerUpTeamStarters: [
+      '11566',
+      '5850',
+      '4137',
+      '4983',
+      '9997',
+      '6801',
+      '6826',
+      '4046',
+      '5119',
+      'SF',
+    ],
+    runnerUpTeamStarterPoints: [
+      31.78, 10.9, 2.8, 12.2, 5.1, 40.1, 0, 26, 10, 0,
+    ],
+    type: 'winniners',
+  },
+];

@@ -1,0 +1,93 @@
+<div class="pseudo-parallax-card-container flex flex-row">
+  <div class="mock top left"></div>
+  <div class="mock top right"></div>
+  <div class="mock bottom left"></div>
+  <div class="mock bottom right"></div>
+
+  <div class="content-container flex">
+    <div class="shining-effect champion-callout-container">
+      <div class="champion-callout-header-container">
+        <div class="champion-callout-header">
+          <h2 class="champion-callout-header-text">
+            {{this.champion.teamName}}
+          </h2>
+          <h2 class="champion-callout-header-text">
+            is the champion!
+          </h2>
+        </div>
+        <div class="champion-callout-image-container">
+          <img
+            class="champion-callout-image large"
+            src={{this.championAvatarUrl}}
+            alt={{this.champion.name}}
+          />
+        </div>
+      </div>
+      <div class="champion-callout-content">
+        <div class="champion-matchup-container">
+          <div class="champion-matchup-component">
+            <div class="champion-matchup-team-name">
+              <span>{{this.champion.teamName}}</span>
+            </div>
+            <div class="champion-matchup-image-container">
+              <img
+                class="champion-callout-image"
+                src={{this.championAvatarUrl}}
+                alt={{this.champion.name}}
+              />
+            </div>
+            <div class="champion-matchup-score">
+              {{this.matchup.winningTeamPoints}}
+            </div>
+          </div>
+          <div class="champion-matchup-component vs">
+            <span class="fs-2">VS</span>
+          </div>
+          <div class="champion-matchup-component">
+            <div class="champion-matchup-team-name">
+              <span>{{this.runnerUp.teamName}}</span>
+            </div>
+            <div class="champion-matchup-image-container">
+              <img
+                class="champion-callout-image"
+                src={{this.runnerUpAvatarUrl}}
+                alt={{this.champion.name}}
+              />
+            </div>
+            <div class="champion-matchup-score">
+              {{this.matchup.runnerUpTeamPoints}}
+            </div>
+          </div>
+        </div>
+        <div class="champion-mvp-showcase">
+          <div class="mvp-image-wrapper">
+            <div class="mvp-header">
+              <h2 class="mvp-text">
+                MVP:
+                {{this.mvp.player.fullName}}
+              </h2>
+            </div>
+            <div class="mvp-image-stats">
+              <div class="mvp-image-container">
+                <img
+                  class="champion-callout-image"
+                  src={{this.mvp.player.image}}
+                  alt={{this.champion.name}}
+                />
+              </div>
+              <div class="mvp-stats">
+                {{this.mvp.points}}
+                Points
+              </div>
+            </div>
+          </div>
+          <div class="champion-quote">
+            <h2 class="text-align-center">
+              "Suck it"
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
