@@ -19,6 +19,22 @@ export default class runnerUpCalloutComponent extends Component {
     return this.args.champion.matchup;
   }
 
+  get championAvatarUrl() {
+    if (this.champion.avatar && this.champion.avatar.startsWith('https://')) {
+      return this.champion.avatar;
+    } else {
+      return 'https://sleepercdn.com/avatars/' + this.champion.avatar;
+    }
+  }
+
+  get runnerUpAvatarUrl() {
+    if (this.runnerUp.avatar && this.runnerUp.avatar.startsWith('https://')) {
+      return this.runnerUp.avatar;
+    } else {
+      return 'https://sleepercdn.com/avatars/' + this.runnerUp.avatar;
+    }
+  }
+
   async loadMVP() {
     let highestScore = this.matchup.winningTeamStarterPoints.reduce(
       (max, num, index) => (num > max.value ? { value: num, index } : max),
@@ -42,21 +58,5 @@ export default class runnerUpCalloutComponent extends Component {
       player: player,
       points: highestScore.value,
     };
-  }
-
-  get championAvatarUrl() {
-    if (this.champion.avatar && this.champion.avatar.startsWith('https://')) {
-      return this.champion.avatar;
-    } else {
-      return 'https://sleepercdn.com/avatars/' + this.champion.avatar;
-    }
-  }
-
-  get runnerUpAvatarUrl() {
-    if (this.runnerUp.avatar && this.runnerUp.avatar.startsWith('https://')) {
-      return this.runnerUp.avatar;
-    } else {
-      return 'https://sleepercdn.com/avatars/' + this.runnerUp.avatar;
-    }
   }
 }

@@ -1,0 +1,52 @@
+.shining-effect {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    #b8860b,
+    /* Dark Gold */ #daa520,
+    /* Goldenrod */ #ffd700,
+    /* Gold */ #b8860b /* Dark Gold */
+  );
+  background-size: 200% 200%;
+  border-radius: 10px; /* Optional */
+  box-shadow: 0 4px 10px rgb(0 0 0 / 30%); /* Adds depth */
+}
+
+.shining-effect::before {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    rgb(255 255 255 / 0%) 40%,
+    rgb(255 255 255 / 80%) 50%,
+    rgb(255 255 255 / 0%) 60%
+  );
+  transform: rotate(25deg);
+  animation: shine 10s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    top: -150%;
+    left: -150%;
+  }
+
+  30% {
+    opacity: 0.3;
+  }
+
+  50% {
+    top: 150%;
+    left: 150%;
+  }
+
+  100% {
+    top: 150%;
+    left: 150%;
+  }
+}

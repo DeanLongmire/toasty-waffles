@@ -319,8 +319,7 @@
   border-radius: 50%;
   background-color: #7f5934;
   border: 2px solid black;
-  box-shadow: inset 2px 2px 1px #b49577, -2px 0 #513721,
-    -2px 0 0 1px black;
+  box-shadow: inset 2px 2px 1px #b49577, -2px 0 #513721, -2px 0 0 1px black;
 }
 
 .b1::before {
@@ -364,8 +363,7 @@
   border-radius: 50%;
   background-color: #7f5934;
   border: 2px solid black;
-  box-shadow: inset 2px 2px 1px #b49577, -2px 0 #513721,
-    -2px 0 0 1px black;
+  box-shadow: inset 2px 2px 1px #b49577, -2px 0 #513721, -2px 0 0 1px black;
 }
 
 .b2::before {

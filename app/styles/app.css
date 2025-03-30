@@ -1,5 +1,7 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
 @import url('./offline.css');
+@import url('./shine.css');
+@import url('./parallax.css');
 
 html {
   font-size: 16px;
@@ -218,7 +220,7 @@ html {
 
 @media (width <= 1180px) {
   .page-section {
-    padding: 0 15px;
+    padding: 0 5px;
   }
 
   @media (width < 900px) {
