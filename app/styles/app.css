@@ -271,4 +271,28 @@ html {
       margin: 0.5rem 0;
     }
   }
+
+  @media (width < 800px) {
+    .champion-callout-wrapper {
+      width: 100%;
+    }
+
+    .champion-mvp-showcase {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .mvp-image-wrapper {
+      flex-direction: column;
+      width: 40%;
+    }
+
+    .champion-callout-image.large {
+      width: 24vw;
+    }
+
+    .page-section {
+      flex-direction: column;
+    }
+  }
 }
