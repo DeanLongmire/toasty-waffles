@@ -11,6 +11,8 @@ export default class ApplicationRoute extends Route {
     this.parseLeague(league);
     this.parseYears(years);
     this.league.latestYear = years.lastObject;
+    this.league.champion = years.lastObject.champion;
+    this.league.runnerUp = years.lastObject.loser;
     return {
       years: years,
       league: league,

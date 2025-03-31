@@ -23,12 +23,14 @@ export default class IndexRoute extends Route {
   async getChampionshipMatchup() {
     let league = this.store.peekRecord('league', '1075584259777228800');
     let bracket = await league.championshipBracket;
-    bracket.winningTeam = await this.store.query('team', {
-      rosterId: bracket.winningTeam,
-    });
-    bracket.runnerUpTeam = await this.store.query('team', {
-      rosterId: bracket.runnerUpTeam,
-    });
+    bracket.winningTeam = await this.store.findRecord(
+      'team',
+      this.league.champion
+    );
+    bracket.runnerUpTeam = await this.store.findRecord(
+      'team',
+      this.league.runnerUp
+    );
 
     return bracket;
   }

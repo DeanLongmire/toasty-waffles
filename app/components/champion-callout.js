@@ -7,7 +7,7 @@ export default class runnerUpCalloutComponent extends Component {
   @service router;
 
   @tracked champion = this.args.champion.team;
-  @tracked runnerUp = this.args.champion.matchup.runnerUpTeam.firstObject;
+  @tracked runnerUp = this.args.champion.matchup.runnerUpTeam;
   @tracked mvp;
 
   constructor() {
