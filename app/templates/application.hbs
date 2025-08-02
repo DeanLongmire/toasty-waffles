@@ -1,7 +1,5 @@
 {{page-title "Toasty Waffles"}}
 
-<Tw-header @years={{@model.years}} />
-
 {{! <iframe
   src="https://sleeper.app/embed/players/nfl/trending/add?lookback_hours=24&limit=25"
   width="350"
@@ -10,4 +8,6 @@
   frameborder="0"
 ></iframe> }}
 
-{{outlet}}
+<Navbar @options={{this.navbarOptions}}>
+  {{outlet}}
+</Navbar>
