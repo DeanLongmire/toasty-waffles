@@ -5,6 +5,7 @@
 
 body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
 }
 
 html {
@@ -45,6 +46,7 @@ html {
   align-items: center;
   padding: 1em;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .champion-callout-image {
@@ -155,7 +157,6 @@ html {
   align-items: center;
   justify-content: center;
   margin: 0.5rem 0;
-  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -165,7 +166,7 @@ html {
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 100%;
   text-align: center;
   font-weight: normal;
 }
@@ -224,7 +225,7 @@ html {
 }
 
 .tw-body {
-  background-color: rgb(88, 88, 88);
+  background-color: rgb(88 88 88);
 }
 
 .week-overview {
