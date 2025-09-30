@@ -1,8 +1,5 @@
 'use strict';
 
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
-  rules: {
-    'no-descending-specificity': null,
-  },
+  extends: ['stylelint-config-standard'],
 };
