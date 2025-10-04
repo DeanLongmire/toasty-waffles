@@ -9,7 +9,7 @@ module.exports = {
     requireConfigFile: false,
     babelOptions: {
       plugins: [
-        ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+        ['module:decorator-transforms', { decoratorsBeforeExport: true }],
       ],
     },
   },
@@ -22,7 +22,11 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: { 'no-descending-specificity': 'off' },
+  rules: {
+    'no-descending-specificity': 'off',
+    'no-dupe-class-members': 'warn',
+    'no-unused-vars': 'warn',
+  },
   overrides: [
     // node files
     {

@@ -4,17 +4,12 @@ import { createServer } from 'miragejs';
 export default function (config) {
   let finalConfig = {
     ...config,
-    // Remove discoverEmberDataModels if you do not want ember-cli-mirage to auto discover the ember models
     models: {
       ...discoverEmberDataModels(config.store),
       ...config.models,
     },
-    // uncomment to opt into ember-cli-mirage to auto discover ember serializers
-    // serializers: applyEmberDataSerializers(config.serializers),
     routes,
   };
-
-  console.log('Final Mirage config:', finalConfig);
 
   return createServer(finalConfig);
 }
