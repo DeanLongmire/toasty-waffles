@@ -11,7 +11,9 @@ Router.map(function () {
     this.route('season', { path: '/:season_id' });
   });
   this.route('league', function () {
-    this.route('players');
+    this.route('players', function () {
+      this.route('player');
+    });
   });
   this.route('teams');
   this.route('teams.team', { path: 'teams/:team_id' });

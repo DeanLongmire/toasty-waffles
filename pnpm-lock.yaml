@@ -39,8 +39,8 @@ importers:
         specifier: ^8.0.1
         version: 8.2.2
       dlg-ui:
-        specifier: ^1.0.9
-        version: 1.0.9
+        specifier: ^1.0.12
+        version: 1.0.12
       ember-auto-import:
         specifier: ^2.6.3
         version: 2.10.0(webpack@5.96.1)
@@ -2367,8 +2367,8 @@ packages:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
 
-  dlg-ui@1.0.9:
-    resolution: {integrity: sha512-LAPEucXmuxff7eTBRJqwULwyH7u64enMHAXwb626jYJGV9g9YAgnnUl6BD+K5/ArX/RSqzCS2vl95sgFDBgrfw==}
+  dlg-ui@1.0.12:
+    resolution: {integrity: sha512-1W2C774JVL8LlkgT1QVRpQmFkgbNulEXHkYq9OVAZ5/ckMfu1p6ROJy5v5qeMdXeJDb/jLisTg4GgV44qu6bPQ==}
     engines: {node: 14.* || 16.* || >= 18}
 
   doctrine@3.0.0:
@@ -8611,7 +8611,7 @@ snapshots:
     dependencies:
       path-type: 4.0.0
 
-  dlg-ui@1.0.9:
+  dlg-ui@1.0.12:
     dependencies:
       ember-cli-babel: 7.26.11
       ember-cli-htmlbars: 6.3.0
