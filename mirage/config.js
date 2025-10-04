@@ -56,6 +56,7 @@ function routes() {
           attributes: {
             startYear: year.startYear,
             endYear: year.endYear,
+            week: year.week,
             champion: year.champion,
             loser: year.loser,
           },
@@ -199,6 +200,56 @@ function routes() {
               }),
             };
           }),
+        },
+      },
+    };
+  });
+
+  this.get('/leagues/:id/weeks/:week/leaders', (schema, request) => {
+    let league = schema.leagues.find(request.params.id);
+    let week = request.params.week;
+
+    return {
+      data: {
+        id: '1234',
+        type: 'weekLeaders',
+        attributes: {
+          qb: {
+            player: '11604',
+            points: 25,
+          },
+          rb: {
+            player: '5844',
+            points: 41,
+          },
+          wr: {
+            player: '6938',
+            points: 34,
+          },
+          te: {
+            player: '11631',
+            points: 31,
+          },
+          k: {
+            player: '10862',
+            points: 14,
+          },
+          def: {
+            player: 'PHI',
+            points: 20,
+          },
+          mostYards: {
+            player: '11564',
+            yards: 233,
+          },
+          mostTds: {
+            player: '11655',
+            tds: 3,
+          },
+          fewestYards: {
+            player: 'SF',
+            yards: 133,
+          },
         },
       },
     };

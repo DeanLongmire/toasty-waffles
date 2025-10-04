@@ -24,6 +24,10 @@ html {
   }
 }
 
+.border-rounded {
+  border-radius: 50%;
+}
+
 .champion-callout-header {
   text-align: center;
   margin: 1rem;
