@@ -1,8 +1,8 @@
 import Model, { attr } from '@ember-data/model';
 
 export default class YearModel extends Model {
-  @attr('number') startYear;
-  @attr('number') endYear;
+  @attr('string') startYear;
+  @attr('string') endYear;
   @attr('number') week;
   @attr('string') yearRange;
   @attr('string') champion;

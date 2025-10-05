@@ -10,13 +10,19 @@ export default class ApplicationRoute extends Route {
     let league = await this.store.findRecord('league', this.league.id);
     this.parseLeague(league);
     this.parseYears(years);
-    this.league.latestYear = years.lastObject;
-    this.league.champion = years.lastObject.champion;
-    this.league.runnerUp = years.lastObject.loser;
-    this.league.week = years.lastObject.week;
+
+    const yearsArray = [...years];
+    const latestYear = yearsArray.sort((a, b) => {
+      return parseInt(b.endYear) - parseInt(a.endYear);
+    })[0];
+
+    this.league.latestYear = latestYear;
+    this.league.champion = latestYear.champion;
+    this.league.runnerUp = latestYear.loser;
+    this.league.week = latestYear.week;
+
     return {
       years: years,
-      league: league,
     };
   }
 
