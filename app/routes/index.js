@@ -17,7 +17,20 @@ export default class IndexRoute extends Route {
   }
 
   async getChampionTeam() {
-    return await this.store.findRecord('team', this.league.latestYear.champion);
+    console.log(
+      'Loading champion team with ID:',
+      this.league.latestYear?.champion
+    );
+
+    // If latestYear is not set yet, use the champion from league service directly
+    const championId = this.league.latestYear?.champion || this.league.champion;
+
+    if (!championId) {
+      console.warn('No champion ID found');
+      return null;
+    }
+
+    return await this.store.findRecord('team', championId);
   }
 
   async getChampionshipMatchup() {
