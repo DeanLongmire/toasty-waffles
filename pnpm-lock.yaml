@@ -70,8 +70,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0(@babel/core@7.26.0)
       dlg-ui:
-        specifier: ^1.0.14
-        version: 1.0.14(@babel/core@7.26.0)(ember-source@4.12.4(@babel/core@7.26.0)(@glimmer/component@2.0.0)(webpack@5.96.1))
+        specifier: ^1.0.18
+        version: 1.0.18(@babel/core@7.26.0)(ember-source@4.12.4(@babel/core@7.26.0)(@glimmer/component@2.0.0)(webpack@5.96.1))
       ember-auto-import:
         specifier: ^2.6.3
         version: 2.10.0(webpack@5.96.1)
@@ -2853,8 +2853,8 @@ packages:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
 
-  dlg-ui@1.0.14:
-    resolution: {integrity: sha512-ROG1c2dajnYLQWOM+AZV2K6WhfYf96pb+rZNbIQLNfm9uuDHvb02B1koRw0MoEPrGGi6j3qcwdVbB7e3vbqBgA==}
+  dlg-ui@1.0.18:
+    resolution: {integrity: sha512-irKjh+CxPylO4luthFEdolJruP9Jr4Y3olXOm5t9p5xrrwsXzqURPJifdQdza8ojS5qgltEe9HeTM21vKEfz3Q==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       ember-source: ^4.8.0 || ^5.0.0 || ^6.0.0
@@ -9608,7 +9608,7 @@ snapshots:
     dependencies:
       path-type: 4.0.0
 
-  dlg-ui@1.0.14(@babel/core@7.26.0)(ember-source@4.12.4(@babel/core@7.26.0)(@glimmer/component@2.0.0)(webpack@5.96.1)):
+  dlg-ui@1.0.18(@babel/core@7.26.0)(ember-source@4.12.4(@babel/core@7.26.0)(@glimmer/component@2.0.0)(webpack@5.96.1)):
     dependencies:
       '@ember/string': 3.1.1
       ember-cli-babel: 8.2.0(@babel/core@7.26.0)
